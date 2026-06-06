@@ -1,0 +1,7 @@
+﻿src/components/requisitions/RequisitionDetail.tsx(228,9): error TS2353: Object literal may only specify known properties, and 'departmentId' does not exist in type 'UpdateRequisitionRequest'.
+src/pages/dashboard/EmployeeRequisitionDetailPage.tsx(379,9): error TS2322: Type '({ key: string; label: string; width: string; render: (value: any, row: any, index: number) => Element; } | { key: string; label: string; width: string; align: string; render: (value: number) => Element; } | { ...; })[] | ({ ...; } | ... 1 more ... | { ...; })[]' is not assignable to type 'TableColumn[]'.
+  Type '({ key: string; label: string; width: string; render: (value: any, row: any, index: number) => Element; } | { key: string; label: string; width: string; align: string; render: (value: number) => Element; } | { ...; })[]' is not assignable to type 'TableColumn[]'.
+    Type '{ key: string; label: string; width: string; render: (value: any, row: any, index: number) => Element; } | { key: string; label: string; width: string; align: string; render: (value: number) => Element; } | { ...; }' is not assignable to type 'TableColumn'.
+      Type '{ key: string; label: string; width: string; align: string; render: (value: number) => JSX.Element; }' is not assignable to type 'TableColumn'.
+        Types of property 'align' are incompatible.
+          Type 'string' is not assignable to type '"center" | "left" | "right" | undefined'.

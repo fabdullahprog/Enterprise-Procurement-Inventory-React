@@ -1,0 +1,265 @@
+/* src/pages/dashboard/rfq-quotations.css */
+
+.rfq-quotations-page {
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.rfq-quotations-page .page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+  gap: 1rem;
+}
+
+.rfq-quotations-page .page-header h1 {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #1a202c;
+  margin: 0 0 0.5rem 0;
+}
+
+.rfq-quotations-page .page-header p {
+  color: #718096;
+  margin: 0;
+  font-size: 0.875rem;
+}
+
+.rfq-quotations-page .header-actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.rfq-quotations-page .stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.rfq-quotations-page .stat-card {
+  background: white;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.rfq-quotations-page .stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.rfq-quotations-page .stat-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.rfq-quotations-page .stat-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.rfq-quotations-page .stat-label {
+  font-size: 0.813rem;
+  color: #718096;
+  font-weight: 500;
+}
+
+.rfq-quotations-page .stat-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2d3748;
+}
+
+.rfq-quotations-page .quotations-table-container {
+  background: white;
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.rfq-quotations-page .quotations-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.rfq-quotations-page .quotations-table thead {
+  background: #f7fafc;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.rfq-quotations-page .quotations-table th {
+  padding: 1rem;
+  text-align: left;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #4a5568;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.rfq-quotations-page .quotations-table td {
+  padding: 1rem;
+  border-bottom: 1px solid #e2e8f0;
+  font-size: 0.875rem;
+  color: #2d3748;
+}
+
+.rfq-quotations-page .quotations-table tbody tr:hover {
+  background: #f7fafc;
+}
+
+.rfq-quotations-page .quotations-table tbody tr.lowest-price {
+  background: rgba(34, 197, 94, 0.05);
+}
+
+.rfq-quotations-page .quotations-table tbody tr.lowest-price:hover {
+  background: rgba(34, 197, 94, 0.08);
+}
+
+.rfq-quotations-page .quotation-number {
+  font-weight: 600;
+  color: #4f8ef7;
+}
+
+.rfq-quotations-page .supplier-name {
+  font-weight: 500;
+  color: #2d3748;
+}
+
+.rfq-quotations-page .amount {
+  font-weight: 600;
+  color: #2d3748;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.rfq-quotations-page .best-price-badge {
+  display: inline-block;
+  padding: 0.125rem 0.5rem;
+  background: #22c55e;
+  color: white;
+  font-size: 0.688rem;
+  font-weight: 600;
+  border-radius: 9999px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.rfq-quotations-page .delivery-days {
+  color: #718096;
+}
+
+.rfq-quotations-page .status-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.rfq-quotations-page .status-pending {
+  background: rgba(251, 146, 60, 0.1);
+  color: #fb923c;
+}
+
+.rfq-quotations-page .status-selected {
+  background: rgba(34, 197, 94, 0.1);
+  color: #22c55e;
+}
+
+.rfq-quotations-page .status-rejected {
+  background: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+}
+
+.rfq-quotations-page .btn-sm {
+  padding: 0.5rem 0.75rem;
+  font-size: 0.813rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+}
+
+.rfq-quotations-page .alert {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.rfq-quotations-page .alert-success {
+  background: rgba(34, 197, 94, 0.1);
+  border: 1px solid rgba(34, 197, 94, 0.3);
+  color: #15803d;
+}
+
+.rfq-quotations-page .empty-state {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: white;
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.rfq-quotations-page .empty-state svg {
+  color: #cbd5e0;
+  margin-bottom: 1rem;
+}
+
+.rfq-quotations-page .empty-state h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin: 0 0 0.5rem 0;
+}
+
+.rfq-quotations-page .empty-state p {
+  color: #718096;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .rfq-quotations-page {
+    padding: 1rem;
+  }
+
+  .rfq-quotations-page .page-header {
+    flex-direction: column;
+  }
+
+  .rfq-quotations-page .header-actions {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .rfq-quotations-page .header-actions button {
+    width: 100%;
+  }
+
+  .rfq-quotations-page .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .rfq-quotations-page .quotations-table-container {
+    overflow-x: auto;
+  }
+
+  .rfq-quotations-page .quotations-table {
+    min-width: 800px;
+  }
+}

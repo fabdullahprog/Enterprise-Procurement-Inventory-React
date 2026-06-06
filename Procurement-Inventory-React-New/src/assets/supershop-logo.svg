@@ -1,0 +1,8 @@
+<svg width="180" height="48" viewBox="0 0 180 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="1" y="1" width="46" height="46" rx="12" fill="#EEF4FF" stroke="#C8D8FF"/>
+  <path d="M12 17H36M12 24H36M12 31H26" stroke="#4F8EF7" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="36" cy="31" r="5" fill="#4F8EF7"/>
+  <text x="58" y="22" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700" fill="#1E293B">SuperShop</text>
+  <text x="58" y="37" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#64748B">Management Platform</text>
+</svg>
+

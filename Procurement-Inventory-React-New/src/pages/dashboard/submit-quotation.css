@@ -1,0 +1,243 @@
+/* src/pages/dashboard/submit-quotation.css */
+
+.submit-quotation-page {
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.submit-quotation-page .page-header {
+  margin-bottom: 2rem;
+}
+
+.submit-quotation-page .page-header h1 {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #1a202c;
+  margin: 0 0 0.5rem 0;
+}
+
+.submit-quotation-page .page-subtitle {
+  color: #718096;
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+.submit-quotation-page .quotation-content {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.submit-quotation-page .rfq-summary-card,
+.submit-quotation-page .quotation-form-card {
+  background: white;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.submit-quotation-page .rfq-summary-card h2,
+.submit-quotation-page .quotation-form-card h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin: 0 0 1.5rem 0;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.submit-quotation-page .summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.submit-quotation-page .summary-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.submit-quotation-page .summary-item .label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #718096;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.submit-quotation-page .summary-item .value {
+  font-size: 0.938rem;
+  font-weight: 500;
+  color: #2d3748;
+}
+
+.submit-quotation-page .notes-section {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: #f7fafc;
+  border-radius: 0.5rem;
+  border-left: 3px solid #4f8ef7;
+}
+
+.submit-quotation-page .notes-section strong {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #2d3748;
+  font-size: 0.875rem;
+}
+
+.submit-quotation-page .notes-section p {
+  margin: 0;
+  color: #4a5568;
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+.submit-quotation-page .form-group {
+  margin-bottom: 1.5rem;
+}
+
+.submit-quotation-page .form-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.submit-quotation-page .form-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 0.5rem;
+}
+
+.submit-quotation-page .form-label.required::after {
+  content: ' *';
+  color: #e53e3e;
+}
+
+.submit-quotation-page select,
+.submit-quotation-page input[type="number"],
+.submit-quotation-page textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  transition: all 0.2s;
+}
+
+.submit-quotation-page select:focus,
+.submit-quotation-page input:focus,
+.submit-quotation-page textarea:focus {
+  outline: none;
+  border-color: #4f8ef7;
+  box-shadow: 0 0 0 3px rgba(79, 142, 247, 0.1);
+}
+
+.submit-quotation-page .items-table {
+  overflow-x: auto;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+}
+
+.submit-quotation-page .items-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.submit-quotation-page .items-table th {
+  background: #f7fafc;
+  padding: 0.75rem;
+  text-align: left;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #4a5568;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.submit-quotation-page .items-table td {
+  padding: 0.75rem;
+  border-bottom: 1px solid #e2e8f0;
+  font-size: 0.875rem;
+  color: #2d3748;
+}
+
+.submit-quotation-page .items-table input[type="number"] {
+  padding: 0.5rem;
+  font-size: 0.813rem;
+}
+
+.submit-quotation-page .items-table .total-price {
+  font-weight: 600;
+  color: #4f8ef7;
+}
+
+.submit-quotation-page .items-table tfoot td {
+  background: #f7fafc;
+  font-weight: 600;
+  border-bottom: none;
+}
+
+.submit-quotation-page .items-table .text-right {
+  text-align: right;
+}
+
+.submit-quotation-page .items-table .grand-total {
+  color: #22c55e;
+  font-size: 1rem;
+}
+
+.submit-quotation-page .char-count {
+  font-size: 0.75rem;
+  color: #a0aec0;
+  margin-top: 0.25rem;
+  text-align: right;
+}
+
+.submit-quotation-page .form-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.submit-quotation-page .alert {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.submit-quotation-page .alert-error {
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  color: #c53030;
+}
+
+@media (max-width: 768px) {
+  .submit-quotation-page {
+    padding: 1rem;
+  }
+
+  .submit-quotation-page .summary-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .submit-quotation-page .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .submit-quotation-page .form-actions {
+    flex-direction: column;
+  }
+
+  .submit-quotation-page .form-actions button {
+    width: 100%;
+  }
+}

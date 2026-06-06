@@ -1,0 +1,289 @@
+/* ============================================
+   SuperShop Management - Global Styles
+   Theme: Clean Light Professional
+   ============================================ */
+
+/* Tailwind CSS */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* Purple/Violet Theme Colors */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f7f9fc;
+  --bg-card: #ffffff;
+  --bg-input: #ffffff;
+  --bg-hover: #f1f5f9;
+
+  --accent: #8b5cf6;
+  --accent-hover: #7c3aed;
+  --accent-soft: rgba(139, 92, 246, 0.12);
+  --accent-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+
+  --success: #22c55e;
+  --success-soft: rgba(34, 197, 94, 0.12);
+  --error: #ef4444;
+  --error-soft: rgba(239, 68, 68, 0.12);
+  --warning: #f59e0b;
+
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #64748b;
+
+  --border: #dbe3ee;
+  --border-focus: #8b5cf6;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+
+  --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.08);
+  --shadow-md: 0 8px 30px rgba(15, 23, 42, 0.1);
+  --shadow-lg: 0 16px 50px rgba(15, 23, 42, 0.12);
+
+  --font-main: 'Inter', sans-serif;
+  --font-mono: 'DM Mono', monospace;
+
+  --transition: 0.2s ease;
+}
+
+body {
+  font-family: var(--font-main);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---- Global Table Styles ---- */
+table {
+  @apply w-full divide-y divide-slate-100 border-b border-slate-100;
+}
+thead {
+  @apply bg-slate-50/80;
+}
+th {
+  @apply px-3 py-2.5 text-center text-[11px] font-semibold text-slate-500 uppercase tracking-wider whitespace-nowrap;
+}
+th:first-child {
+  @apply text-left;
+}
+tbody {
+  @apply divide-y divide-slate-100 bg-white;
+}
+tr:hover {
+  @apply bg-slate-50/50 transition-colors;
+}
+td {
+  @apply px-3 py-2.5 text-[13px] text-slate-700;
+}
+
+/* ---- Sticky Action Column ---- */
+.th-action {
+  @apply sticky right-0 z-10 bg-slate-50/95 backdrop-blur-sm text-center;
+  box-shadow: -4px 0 10px rgba(0,0,0,0.05);
+}
+.td-action {
+  @apply sticky right-0 z-10 bg-white text-center;
+  box-shadow: -4px 0 10px rgba(0,0,0,0.05);
+}
+tr:hover .td-action {
+  @apply bg-slate-50/50;
+}
+
+/* ---- Truncation Helpers ---- */
+.cell-truncate {
+  @apply truncate;
+  max-width: 150px;
+}
+@media (min-width: 640px) {
+  .cell-truncate {
+    max-width: 200px;
+  }
+}
+
+/* ---- Custom Scrollbar with Page Indicator ---- */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #2d3748;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #a0aec0 0%, #cbd5e0 100%);
+  border-radius: 10px;
+  border: 2px solid #2d3748;
+  position: relative;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #cbd5e0 0%, #e2e8f0 100%);
+}
+
+/* Scrollbar corner */
+::-webkit-scrollbar-corner {
+  background: #2d3748;
+}
+
+/* Firefox scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #a0aec0 #2d3748;
+}
+
+/* ---- Global Input / Button ---- */
+input, button, select, textarea {
+  font-family: var(--font-main);
+  font-size: 14px;
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* ---- Form Group ---- */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+}
+
+.form-group input {
+  background: var(--bg-input);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 11px 14px;
+  color: var(--text-primary);
+  transition: border-color var(--transition), box-shadow var(--transition);
+  outline: none;
+}
+
+.form-group input:focus {
+  border-color: var(--border-focus);
+  box-shadow: 0 0 0 3px var(--accent-soft);
+}
+
+.form-group input.error {
+  border-color: var(--error);
+}
+
+.form-group .field-error {
+  font-size: 12px;
+  color: var(--error);
+}
+
+/* ---- Buttons ---- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 11px 22px;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+  transition: all var(--transition);
+  letter-spacing: 0.02em;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #fff;
+  width: 100%;
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+}
+.btn-primary:hover:not(:disabled) {
+  background: linear-gradient(135deg, #7c3aed 0%, #8b5cf6 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(139, 92, 246, 0.4);
+}
+.btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-secondary {
+  background: #6c757d;
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(108, 117, 125, 0.3);
+}
+.btn-secondary:hover:not(:disabled) {
+  background: #5a6268;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(108, 117, 125, 0.4);
+}
+
+.btn-ghost {
+  background: transparent;
+  border: 1.5px solid var(--border);
+  color: var(--text-secondary);
+}
+.btn-ghost:hover {
+  border-color: #8b5cf6;
+  color: #8b5cf6;
+  background: rgba(139, 92, 246, 0.05);
+}
+
+/* ---- Alert ---- */
+.alert {
+  padding: 12px 16px;
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.alert-error { background: var(--error-soft); color: var(--error); border: 1px solid rgba(239,68,68,0.2); }
+.alert-success { background: var(--success-soft); color: var(--success); border: 1px solid rgba(34,197,94,0.2); }
+
+/* ---- Spinner ---- */
+.spinner {
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ---- Card ---- */
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  box-shadow: var(--shadow-sm);
+}
+
+/* ---- Page fade-in ---- */
+.page-enter {
+  animation: fadeUp 0.35s ease forwards;
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}

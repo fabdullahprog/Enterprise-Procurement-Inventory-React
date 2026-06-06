@@ -1,0 +1,81 @@
+/* src/components/styles/requisition-dashboard.css */
+
+.requisition-dashboard {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.dashboard-header {
+  margin-bottom: 30px;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 20px;
+}
+
+.dashboard-header h1 {
+  font-size: 28px;
+  color: #2c3e50;
+  margin: 0 0 20px 0;
+}
+
+.dashboard-nav {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.nav-btn {
+  padding: 10px 20px;
+  border: 2px solid #e0e0e0;
+  background: white;
+  color: #555;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.nav-btn:hover {
+  border-color: #3498db;
+  color: #3498db;
+}
+
+.nav-btn.active {
+  background: #3498db;
+  color: white;
+  border-color: #3498db;
+}
+
+.dashboard-content {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.error-alert {
+  background: #fee;
+  border: 1px solid #fcc;
+  color: #c00;
+  padding: 12px 15px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.error-alert button {
+  background: none;
+  border: none;
+  color: #c00;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.loading {
+  text-align: center;
+  padding: 40px;
+  font-size: 16px;
+  color: #666;
+}

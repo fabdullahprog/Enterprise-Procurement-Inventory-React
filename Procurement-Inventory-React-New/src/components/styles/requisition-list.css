@@ -1,0 +1,175 @@
+/* src/components/styles/requisition-list.css */
+
+.requisition-list {
+  background: white;
+}
+
+.list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.list-header h2 {
+  margin: 0;
+  font-size: 22px;
+  color: #2c3e50;
+}
+
+.refresh-btn {
+  padding: 8px 15px;
+  background: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s;
+}
+
+.refresh-btn:hover {
+  background: #2980b9;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  color: #999;
+  background: #f9f9f9;
+  border-radius: 4px;
+}
+
+.table-responsive {
+  overflow-x: auto;
+}
+
+.requisitions-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.requisitions-table thead {
+  background: #f5f5f5;
+  border-bottom: 2px solid #ddd;
+}
+
+.requisitions-table th {
+  padding: 12px;
+  text-align: left;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.requisitions-table td {
+  padding: 12px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.requisitions-table tbody tr:hover {
+  background: #f9f9f9;
+}
+
+.req-number {
+  color: #3498db;
+  font-weight: 500;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.status-pending {
+  background: #ffeaa7;
+  color: #d4a500;
+}
+
+.status-approved {
+  background: #a9e6a9;
+  color: #1e7e1e;
+}
+
+.status-rejected {
+  background: #fab1a0;
+  color: #c1121f;
+}
+
+.status-rfq {
+  background: #dfe6e9;
+  color: #2d3436;
+}
+
+.status-po {
+  background: #74b9ff;
+  color: #0052a3;
+}
+
+.status-cancelled {
+  background: #dfe6e9;
+  color: #636e72;
+}
+
+.status-default {
+  background: #dfe6e9;
+  color: #636e72;
+}
+
+.approval-pending {
+  color: #f39c12;
+  font-weight: 600;
+}
+
+.approval-approved {
+  color: #27ae60;
+  font-weight: 600;
+}
+
+.items-count {
+  color: #555;
+  font-weight: 500;
+}
+
+.action-cell {
+  text-align: center;
+}
+
+.view-btn {
+  padding: 6px 12px;
+  background: #3498db;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: background 0.3s;
+}
+
+.view-btn:hover {
+  background: #2980b9;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .requisitions-table {
+    font-size: 12px;
+  }
+
+  .requisitions-table th,
+  .requisitions-table td {
+    padding: 8px;
+  }
+
+  .list-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}

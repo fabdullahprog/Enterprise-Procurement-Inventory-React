@@ -1,0 +1,59 @@
+/* src/components/layout/layout.css */
+
+.layout-wrapper {
+  display: flex;
+  min-height: 100vh;
+  --sidebar-width: 260px;
+  --sidebar-collapsed-width: 72px;
+}
+
+/* Custom scrollbar for the modern sidebar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+.custom-scrollbar:hover::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* ---- Main content ---- */
+.main-content {
+  flex: 1;
+  margin-left: var(--sidebar-width);
+  padding: 20px;
+  transition: margin-left 0.3s ease-in-out;
+  min-height: 100vh;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.sidebar-collapsed .main-content {
+  margin-left: var(--sidebar-collapsed-width);
+}
+
+/* Page header */
+.page-header {
+  margin-bottom: 28px;
+}
+
+.page-header h1 {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #1e293b; /* text-slate-800 */
+  margin-bottom: 4px;
+}
+
+.page-header p {
+  font-size: 13px;
+  color: #64748b; /* text-slate-500 */
+}
